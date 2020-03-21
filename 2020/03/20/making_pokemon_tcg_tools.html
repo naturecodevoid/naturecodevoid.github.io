@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Making Pokemon TCG Tools | naturecodevoid</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+  </head>
+  <body>
+      <h1 align="center"><a href="/">Home</a> | <a href="https://naturecodevoid.github.io/">naturecodevoid</a></h1>
+<nav align="center">
+    <ul>
+        <li><a href="/">Home</a>-</li>
+        <li><a href="https://naturecodevoid.github.io/PokemonTCG_Tools">Pokemon TCG Tools</a>-</li>
+        <li><a href="/blog.html">Blog</a></li>
+    </ul>
+</nav>
+<br>
+<br>
+<hr />
+<br>
+      <h2>Making Pokemon TCG Tools</h1>
+<h3>By naturecodevoid - 20 Mar 2020</h3>
+
+<br>
+
+<h3 id="whats-pokemon-tcg-tools">What’s Pokemon TCG Tools?</h3>
+
+<p>Pokemon TCG Tools is a website I made for help TCG players improve. You can see it
+<a href="https://naturecodevoid.github.io/PokemonTCG_Tools">here</a>.</p>
+
+<h3 id="so-how-did-i-make-it">So, how did I make it?</h3>
+
+<p>I started by getting Ruby and Jekyll, which, annoyingly, took a lot of troubleshooting to install. Then, I ran
+<code class="highlighter-rouge">jekyll new PokemonTCG_Tools --blank</code>, and got to work.</p>
+
+<p>The first thing I did was change the styling, then started working on things like the navigation bar. The styling of
+navigation bar took me a <em>long</em> time to figure it out, but eventually I got it where I wanted. Around this time I also
+cleaned up all of the other files, which helped the website a lot.</p>
+
+<p>Next, I quickly put some links in the links page, and got to work on the price checker. Basically, you enter the card
+name into the input box, and it inserts that text into the search url of TCGplayer. (I’m also looking into using their
+api instead of redirecting, so stay tuned!)</p>
+
+<p>The next thing I did was add the best card for <em>x</em> action page. All it does is loops through a json file containing data
+about the cards, and prints them in a list. <br /><br /> The next day, I added 3 pages, and improved that data for best card
+for <em>x</em> action. The first page I added was a deck lists page. This has information on decks other people have used, and
+is currently empty. I’m hoping to add a deck or two in the next few days, but other projects might have more priority.</p>
+
+<p>The next page I added was the strategy finder page. It’s very similar to the deck lists, but has strategies.</p>
+
+<p>I also added some tips to the tips page, and a contributing guide.</p>
+
+<p>The next day, I was ready to make it public. I added a script that would copy the site contents to another folder, so I
+could switch to the <code class="highlighter-rouge">gh-pages</code> branch and paste everything in. I also quickly fixed the Jekyll config, and rebuilt
+everything. I also made a template for a jekyll website (currently it is private) based on the website, and used it to
+redo my main website. Using GitHub Pages to host the website, the website was complete. Today I rolled in a few quick
+fixes, and I’m looking into using the TCGplayer api. That’s basically it!</p>
+
+      <br>
+<br>
+<br>
+<hr />
+<h3>About</h3>
+<footer>
+    <p>Made by <a href="https://github.com/naturecodevoid">naturecodevoid</a> with &#10084;</p>
+    <p>Hosted by <a href="https://pages.github.com/">GitHub Pages</a></p>
+    <p>Source code at <a href="https://github.com/naturecodevoid/naturecodevoid.github.io/">naturecodevoid/naturecodevoid.github.io</a></p>
+    <!--
+    <h4>Other credit:</h4>
+    -->
+</footer>
+  </body>
+</html>
