@@ -8,18 +8,18 @@ a hover { color: lightgreen; text-decoration: none; }
 
 a active { color: green; text-decoration: none; }
 
-nav { position: absolute; left: 0px; height: 40px; width: 100%; text-align: center; }
+#content { padding-left: 0.55%; }
 
-nav ul { list-style-type: none; margin: 0; padding: 0; overflow: hidden; }
+#title { text-align: left; float: left; padding-left: 0.55%; padding-top: 0.2%; margin: 0 auto; font-size: 30px; }
+
+footer { padding-left: 0.55%; }
+
+nav { position: absolute; left: 50%; height: 40px; width: 49.8%; text-align: right; float: right; overflow: hidden; margin: 0 auto; }
+
+nav ul { list-style-type: none; margin: 0 auto; padding: 0; overflow: hidden; padding-left: 1.1%; padding-top: 0.25%; font-size: 30px; }
 
 nav li { display: inline; /*last-child { border-right: none; }*/ }
 
 nav li a { top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 14px 16px; text-align: center; text-decoration: none; }
-
-.cardSearch { /*button { width: 26% }*/ }
-
-.cardSearch input { width: 200px; }
-
-.cardSearch button { width: auto; }
 
 /*# sourceMappingURL=main.css.map */
