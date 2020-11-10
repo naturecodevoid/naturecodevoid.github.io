@@ -14,13 +14,13 @@ a active { color: green; text-decoration: none; }
 
 #content { padding-left: 0.55%; }
 
-#title { text-align: left; float: left; padding-left: 0.55%; padding-top: 0.2%; margin: 0 auto; font-size: 30px; }
+#title { text-align: left; float: left; padding-left: 0.55%; padding-top: 0.2%; margin: 0 auto; font-size: 24px; }
 
 footer { padding-left: 0.55%; }
 
-nav { position: absolute; left: 50%; height: 40px; width: 49.8%; text-align: right; float: right; overflow: hidden; margin: 0 auto; }
+nav { position: absolute; left: 50%; height: 52px; width: 49.8%; text-align: right; float: right; overflow: hidden; margin: 0 auto; }
 
-nav ul { list-style-type: none; margin: 0 auto; padding: 0; overflow: hidden; padding-left: 1.1%; padding-top: 0.25%; font-size: 30px; }
+nav ul { list-style-type: none; margin: 0 auto; padding: 0; overflow: hidden; padding-left: 1.1%; padding-top: 0.25%; font-size: 24px; }
 
 nav li { display: inline; /*last-child { border-right: none; }*/ }
 
