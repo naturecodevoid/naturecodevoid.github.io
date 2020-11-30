@@ -7,6 +7,11 @@
         <link rel="stylesheet" href="/assets/css/w3.css"> 
         <link rel="stylesheet" href="/assets/css/main.css">
         <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+
+        <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"/>
+
         <meta property="og:title" content="Home | naturecodevoid.dev">
         <meta property="og:description" content="naturecodevoid's website =)">
         <meta property="og:url" content="https://naturecodevoid.dev">
@@ -78,7 +83,49 @@
 
 <h4 id="contact-me">Contact me:</h4>
 
-<p>Discord: naturecodevoid#6253</p>
+<script type="text/javascript">
+    function contact() {
+        two = "Discord: ";
+        one = "n" + "a" + "t" + "u" + "r" + "e";
+        three = "c" + "o" + "d" + "e";
+        five = "v" + "o" + "i" + "d";
+        x = 659000845163251 / 246907793;
+        otherSocials = `Twitter: @${one + three + five}`;
+        function run(
+            a = two +
+                one +
+                three +
+                five +
+                "#" +
+                ((96435 * 34248723478) / 1234538965 - (8746921133 % 53) - x).toString(),
+            b = "\n\nOther socials:\n\n",
+        ) {
+            try {
+                alertify
+                    .confirm(
+                        "naturecodevoid.dev",
+                        a,
+                        () => {
+                            setTimeout(() => {
+                                alertify.alert("naturecodevoid.dev", otherSocials, () => {}).set("label", "Ok");
+                            }, 10);
+                        },
+                        () => {},
+                    )
+                    .set("labels", { ok: "Show other socials", cancel: "Ok" });
+            } catch (e) {
+                alert(a + b + otherSocials);
+            }
+        }
+        run();
+    }
+
+    if (window.location.toString().endsWith("#contact")) {
+        window.addEventListener("load", () => setTimeout(contact, 1 * 1000));
+    }
+</script>
+
+<p><button onclick="contact()">Click to show</button></p>
 
             </div>
             <div id="footer">
