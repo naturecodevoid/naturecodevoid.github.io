@@ -11,6 +11,30 @@
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css" />
 
+<link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+    integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+    crossorigin="anonymous"
+/>
+
+<script type="text/javascript">
+    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes#Polyfill
+    if (!String.prototype.includes) {
+        String.prototype.includes = function(search, start) {
+            "use strict";
+
+            if (search instanceof RegExp) {
+                throw TypeError("first argument must not be a RegExp");
+            }
+            if (start === undefined) {
+                start = 0;
+            }
+            return this.indexOf(search, start) !== -1;
+        };
+    }
+</script>
+
 <meta property="og:title" content="Projects | naturecodevoid.dev" />
 <meta property="og:description" content="naturecodevoid's website =)" />
 <meta property="og:url" content="https://naturecodevoid.dev" />
@@ -21,11 +45,73 @@
     </head>
     <body>
         <div id="background"></div>
-<div id="page">
-    <div id="header">
-        <h4 id="title" href="/">
+<div id="header">
+    <!-- <h4 id="title" href="/">
     <a href="/">naturecodevoid.dev</a>
-</h4>
+</h4> -->
+<script type="text/javascript">
+    window.addEventListener("scroll", function() {
+        const navbar = document.getElementsByClassName("nav")[0];
+        const add = " w3-white";
+        if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+            if (!navbar.className.includes(add)) navbar.className += add;
+        } else navbar.className = navbar.className.replace(add, "");
+    });
+
+    let canChange = true;
+    const run = () =>
+        setTimeout(() => {
+            canChange = true;
+        }, 75);
+    function toggleNav() {
+        if (canChange) {
+            var element = document.getElementsByClassName("nav-mobile")[0];
+            if (!element.className.includes("w3-show")) {
+                element.className += " w3-show";
+            } else {
+                element.className = element.className.replace(" w3-show", "");
+            }
+            console.debug("Toggled nav");
+            canChange = false;
+            run();
+        } else console.debug("Cant toggle nav");
+    }
+</script>
+
+<div class="nav-div w3-top w3-left w3-card">
+    <div class="nav w3-bar">
+        <a href="/" class="w3-bar-item w3-button w3-left"
+            ><i class="fas fa-tree"></i> NATURECODEVOID.DEV</a
+        >
+        <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" onclick="toggleNav()">
+            <i class="fas fa-bars"></i>
+        </a>
+        <a href="/" class="w3-bar-item w3-button w3-hide-small w3-right"
+            ><i class="fas fa-home"></i> HOME</a
+        >
+        <a href="/projects.html" class="w3-bar-item w3-button w3-hide-small w3-right"
+            ><i class="fas fa-clipboard-list"></i> PROJECTS</a
+        >
+        <a href="/downloads.html" class="w3-bar-item w3-button w3-hide-small w3-right"
+            ><i class="fas fa-download"></i> DOWNLOADS</a
+        >
+    </div>
+
+    <!-- Mobile -->
+    <div class="nav-mobile w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+        <a href="/downloads.html" class="w3-bar-item w3-button w3-left" onclick="toggleNav()"
+            ><i class="fas fa-download"></i> DOWNLOADS</a
+        >
+        <a href="/projects.html" class="w3-bar-item w3-button w3-left" onclick="toggleNav()"
+            ><i class="fas fa-clipboard-list"></i> PROJECTS</a
+        >
+        <a href="/" class="w3-bar-item w3-button w3-left" onclick="toggleNav()"
+            ><i class="fas fa-home"></i> HOME</a
+        >
+    </div>
+</div>
+
+<!--
 <nav>
     <ul>
         
@@ -50,11 +136,14 @@
     </ul>
 </nav>
 <br />
+-->
 
 <br />
-<hr style="margin-top: 5px;" />
+<br />
+<!-- <hr style="margin-top: 16px;" /> -->
 
-    </div>
+</div>
+<div id="page">
     <div id="content">
         <h2 id="projects">Projects</h2>
 
@@ -81,23 +170,25 @@
 
 
     </div>
-    <div id="footer">
-        <br />
-<hr />
-<footer>
-    <h3>About</h3>
-    <p>Made by <a href="https://github.com/naturecodevoid">naturecodevoid</a> with &#10084;</p>
-    <p>Built using <a href="https://jekyllrb.com/">Jekyll</a></p>
-    <p>Hosted by <a href="https://pages.github.com/">GitHub Pages</a></p>
-    <p>
-        Source code at
-        <a href="https://github.com/naturecodevoid/naturecodevoid.github.io/"
-            >naturecodevoid/naturecodevoid.github.io</a
-        >
-    </p>
-</footer>
+</div>
+<div id="footer">
+    <br />
+<!-- <hr /> -->
+<div class="footer-box">
+    <footer>
+        <h3>About</h3>
+        <p>Made by <a href="https://github.com/naturecodevoid">naturecodevoid</a></p>
+        <p>Built using <a href="https://jekyllrb.com/">Jekyll</a></p>
+        <p>Hosted by <a href="https://pages.github.com/">GitHub Pages</a></p>
+        <p>
+            Source code at
+            <a href="https://github.com/naturecodevoid/naturecodevoid.github.io/"
+                >naturecodevoid/naturecodevoid.github.io</a
+            >
+        </p>
+    </footer>
+</div>
 
-    </div>
 </div>
 
     </body>
