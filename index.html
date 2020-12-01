@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html lang="en-US">
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta charset="utf-8">
-        <title>Home | naturecodevoid.dev</title>
-        <link rel="stylesheet" href="/assets/css/w3.css"> 
-        <link rel="stylesheet" href="/assets/css/main.css">
-        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="utf-8" />
+<title>Home | naturecodevoid.dev</title>
 
-        <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
-        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
-        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"/>
+<link rel="stylesheet" href="/assets/css/w3.css" /> <link rel="stylesheet" href="/assets/css/main.css" /> <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 
-        <meta property="og:title" content="Home | naturecodevoid.dev">
-        <meta property="og:description" content="naturecodevoid's website =)">
-        <meta property="og:url" content="https://naturecodevoid.dev">
-        <meta property="og:locale" content="en_US">
-        <meta property="og:type" content="website">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css" />
+
+<meta property="og:title" content="Home | naturecodevoid.dev" />
+<meta property="og:description" content="naturecodevoid's website =)" />
+<meta property="og:url" content="https://naturecodevoid.dev" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     </head>
     <body>
         <div id="background"></div>
-        <div id="page">
-            <div id="header">
-                <h4 id="title" href="/">
+<div id="page">
+    <div id="header">
+        <h4 id="title" href="/">
     <a href="/">naturecodevoid.dev</a>
 </h4>
 <nav>
@@ -32,6 +32,12 @@
 
         <li>
             <a href="/projects.html"><strong>Projects</strong></a>
+        </li>
+
+        
+
+        <li>
+            <a href="/downloads.html"><strong>Downloads</strong></a>
         </li>
 
         
@@ -48,9 +54,9 @@
 <br />
 <hr style="margin-top: 5px;" />
 
-            </div>
-            <div id="content">
-                <h2 id="home">Home</h2>
+    </div>
+    <div id="content">
+        <h2 id="home">Home</h2>
 
 <h3 id="welcome-to-naturecodevoiddev">Welcome to <a href="/">naturecodevoid.dev</a>!</h3>
 
@@ -84,6 +90,14 @@
 <h4 id="contact-me">Contact me:</h4>
 
 <script type="text/javascript">
+    // https://github.com/naturecodevoid/JSUtils/blob/master/src/replaceAll.js
+    const replaceAll = (string, search, replace) => {
+        return string.split(search).join(replace);
+    };
+    String.prototype.replaceAll = function(search = "", replace = "") {
+        return replaceAll(this, search, replace);
+    };
+
     function contact() {
         two = "Discord: ";
         one = "n" + "a" + "t" + "u" + "r" + "e";
@@ -98,10 +112,11 @@
                 five +
                 "#" +
                 ((96435 * 34248723478) / 1234538965 - (8746921133 % 53) - x).toString(),
-            b = "\n\nOther socials:\n\n",
+            b = "\n\n",
         ) {
             try {
-                alertify
+                alertify.alert("naturecodevoid.dev", (a + b + otherSocials).toString().replaceAll("\n", "<br />"));
+                /*alertify
                     .confirm(
                         "naturecodevoid.dev",
                         a,
@@ -112,7 +127,7 @@
                         },
                         () => {},
                     )
-                    .set("labels", { ok: "Show other socials", cancel: "Ok" });
+                    .set("labels", { ok: "Show other socials", cancel: "Ok" });*/
             } catch (e) {
                 alert(a + b + otherSocials);
             }
@@ -127,9 +142,9 @@
 
 <p><button onclick="contact()">Click to show</button></p>
 
-            </div>
-            <div id="footer">
-                <br />
+    </div>
+    <div id="footer">
+        <br />
 <hr />
 <footer>
     <h3>About</h3>
@@ -144,7 +159,8 @@
     </p>
 </footer>
 
-            </div>
-        </div>
+    </div>
+</div>
+
     </body>
 </html>
