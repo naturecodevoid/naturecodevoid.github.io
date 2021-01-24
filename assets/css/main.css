@@ -4,7 +4,7 @@ body { background: #2e2e2e; background-image: url("/assets/background.png"); bac
 
 #page { margin: 0; padding: 8px; padding-top: 4px; }
 
-#background { background: #000; position: absolute; min-height: 100vh; opacity: 0.725; z-index: -1; top: 0; bottom: 0; left: 0; right: 0; overflow: hidden; }
+#background { background: #000; position: absolute; min-height: 100vh; height: max-content; opacity: 0.725; z-index: -1; top: 0; bottom: 0; left: 0; right: 0; overflow: hidden; }
 
 a { color: deepskyblue; text-decoration: none; }
 
@@ -20,9 +20,13 @@ a active { color: green; text-decoration: none; }
 
 .nav-div { opacity: 0.95; }
 
-.footer-box { width: 100vw; background-color: rgba(24, 24, 24, 0.753); margin: 0; padding: 0; }
+.footer-box { background-color: rgba(24, 24, 24, 0.753); margin: 0; padding: 0; width: 100%; }
 
-footer { padding-left: 0.55%; margin: 0; padding: 12px; padding-top: 4px; padding-bottom: 4px; }
+footer { padding-left: 0.55%; margin: 0; padding: 12px; padding-top: 2px; padding-bottom: 4px; }
+
+.w3-dropdown-content { margin-top: 38px; min-width: 140px; }
+
+.mobile-project { margin-left: 17.5px; }
 
 nav { position: absolute; left: 50%; height: 52px; width: 49.8%; text-align: right; float: right; overflow: hidden; margin: 0 auto; }
 

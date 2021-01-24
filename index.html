@@ -1,17 +1,20 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang='en-US'>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta charset="utf-8" />
 <title>Home | naturecodevoid.dev</title>
 
-<link rel="stylesheet" href="/assets/css/w3.css" /> <link rel="stylesheet" href="/assets/css/main.css" /> <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="stylesheet" href='/assets/css/normalize.css' />
+<link rel="stylesheet" href='/assets/css/w3.css' />
+<link rel="stylesheet" href='/assets/css/main.css' />
+<link rel="shortcut icon" type="image/x-icon" href='/favicon.ico' />
 
 <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css" />
 
-<script src="/assets/js/fetch.umd.js"></script>
+<script src='/assets/js/fetch.umd.js'></script>
 
 <link
     rel="stylesheet"
@@ -82,63 +85,144 @@
 
 <div class="nav-div w3-top w3-left w3-card">
     <div class="nav w3-bar">
-        <a href="/" class="w3-bar-item w3-button w3-left"
-            ><i class="fas fa-tree"></i> NATURECODEVOID.DEV</a
+        <a href="/" class="w3-bar-item w3-button w3-left" id="icon-button">
+            <i class="fas fa-tree"></i> NATURECODEVOID.DEV</a
         >
-        <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" onclick="toggleNav()">
+
+        <script type="text/javascript">
+            // Script to randomize naturecodevoid.dev icon
+
+            const tryChange = () => {
+                const e = document.getElementById("icon-button");
+
+                if (typeof e === "undefined") return setTimeout(() => tryChange(), 1);
+                if (e === null) return setTimeout(() => tryChange(), 1);
+
+                // https://stackoverflow.com/a/4960020
+                //const randomValue = Math.floor(Math.random() * 100) + 1;
+                const choices = [
+                    `<i class="fas fa-tree"></i>`,
+                    `<i class="fas fa-leaf"></i>`,
+                    `<i class="fas fa-code"></i>`,
+                    `<i class="fas fa-terminal"></i>`,
+                    `<i class="fas fa-mountain"></i>`,
+                    `<i class="fas fa-heart"></i>`,
+                    `<i class="fas fa-gamepad"></i>`,
+                    `<i class="fas fa-bug"></i>`,
+                    `<i class="fas fa-coffee"></i>`,
+                    `<i class="fas fa-microchip"></i>`,
+                    `<i class="fas fa-archive"></i>`,
+                    `<i class="fas fa-file"></i>`,
+                    `<i class="fas fa-file"></i>`,
+                    `<i class="fas fa-cat"></i>`,
+                    `<i class="fas fa-dog"></i>`,
+                    `<i class="fas fa-paw"></i>`,
+                    `<i class="fas fa-folder"></i>`,
+                    `<i class="fas fa-laptop-code"></i>`,
+                    `<i class="fas fa-code-branch"></i>`,
+                    `<i class="fas fa-desktop"></i>`,
+                    `<i class="fas fa-server"></i>`,
+                    `<i class="fas fa-save"></i>`,
+                    `<i class="fas fa-mobile"></i>`,
+                    `<i class="fas fa-power-off"></i>`,
+                    `<i class="fas fa-hard-hat"></i>`,
+                    `<i class="fas fa-tools"></i>`,
+                    `<i class="fas fa-pencil-alt"></i>`,
+                    `<i class="fas fa-truck-pickup"></i>`,
+                    `<i class="fas fa-biking"></i>`,
+                    `<i class="fas fa-battery-half"></i>`,
+                    `<i class="fas fa-battery-full"></i>`,
+                    `<i class="fas fa-headset"></i>`,
+                    `<i class="fas fa-skiing"></i>`,
+                    `<i class="fas fa-snowflake"></i>`,
+                    `<i class="fas fa-snowboarding"></i>`,
+                    `<i class="fas fa-cloud"></i>`,
+                    `<i class="fab fa-js-square"></i>`,
+                    `<i class="fas fa-infinity"></i>`,
+                    `<i class="fas fa-calculator"></i>`,
+                    `<i class="fas fa-wifi"></i>`,
+                    `<i class="fas fa-rocket"></i>`,
+                    `<i class="fab fa-python"></i>`,
+                    `<i class="fab fa-html5"></i>`,
+                    `<i class="fab fa-css3-alt"></i>`,
+                    `<i class="fab fa-java"></i>`,
+                    `<i class="fas fa-file-code"></i>`,
+                    `<i class="fab fa-pagelines"></i>`,
+                    `<i class="fas fa-seedling"></i>`,
+                ];
+                // https://stackoverflow.com/a/5915122
+                const choice = choices[Math.floor(Math.random() * choices.length)];
+                //console.debug(randomValue);
+                console.debug(choice, choices.length);
+                e.innerHTML = e.innerHTML.replace(`<i class="fas fa-tree"></i>`, choice);
+                // if (randomValue === 1) {
+                //     e.innerHTML = e.innerHTML.replace(`<i class="fas fa-tree"></i>`, choice);
+                // }
+            };
+            tryChange();
+        </script>
+
+        <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" onclick="toggleNav();">
             <i class="fas fa-bars"></i>
         </a>
+
         <a href="/" class="w3-bar-item w3-button w3-hide-small w3-right"
             ><i class="fas fa-home"></i> HOME</a
         >
-        <a href="/projects.html" class="w3-bar-item w3-button w3-hide-small w3-right"
-            ><i class="fas fa-clipboard-list"></i> PROJECTS</a
-        >
-        <a href="/downloads.html" class="w3-bar-item w3-button w3-hide-small w3-right"
+        <div class="w3-dropdown-hover w3-hide-small w3-right">
+            <a href='/projects/' class="w3-bar-item w3-button w3-hide-small w3-right">
+                <i class="fas fa-clipboard-list"></i> PROJECTS <i class="fas fa-angle-down"></i>
+            </a>
+            <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                <!-- Start projects -->
+
+                <a href='/projects/randomtextgenerator/' class="w3-bar-item w3-button"
+                    >RANDOMTEXTGENERATOR</a
+                >
+
+                <!-- End projects -->
+
+                <a href='/projects/#other-projects' class="w3-bar-item w3-button"
+                    >OTHER PROJECTS</a
+                >
+            </div>
+        </div>
+        <a href='/downloads/' class="w3-bar-item w3-button w3-hide-small w3-right"
             ><i class="fas fa-download"></i> DOWNLOADS</a
         >
     </div>
 
     <!-- Mobile -->
     <div class="nav-mobile w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-        <a href="/downloads.html" class="w3-bar-item w3-button w3-left" onclick="toggleNav()"
+        <a
+            href='/downloads/'
+            class="w3-bar-item w3-button w3-hover-black w3-left"
+            onclick="toggleNav();"
             ><i class="fas fa-download"></i> DOWNLOADS</a
         >
-        <a href="/projects.html" class="w3-bar-item w3-button w3-left" onclick="toggleNav()"
+        <a
+            href='/projects/'
+            class="w3-bar-item w3-button w3-hover-black w3-left"
+            onclick="toggleNav();"
             ><i class="fas fa-clipboard-list"></i> PROJECTS</a
         >
-        <a href="/" class="w3-bar-item w3-button w3-left" onclick="toggleNav()"
+
+        <!-- Start projects -->
+
+        <a
+            href='/projects/randomtextgenerator/'
+            class="w3-bar-item w3-button w3-hover-black w3-left"
+        >
+            <span class="mobile-project"><i class="fas fa-angle-right"></i> RANDOMTEXTGENERATOR</span>
+        </a>
+
+        <!-- End projects -->
+
+        <a href="/" class="w3-bar-item w3-button w3-hover-black w3-left" onclick="toggleNav()"
             ><i class="fas fa-home"></i> HOME</a
         >
     </div>
 </div>
-
-<!--
-<nav>
-    <ul>
-        
-
-        <li>
-            <a href="/projects.html"><strong>Projects</strong></a>
-        </li>
-
-        
-
-        <li>
-            <a href="/downloads.html"><strong>Downloads</strong></a>
-        </li>
-
-        
-
-        <li>
-            <a href="/"><strong>Home</strong></a>
-        </li>
-
-        
-    </ul>
-</nav>
-<br />
--->
 
 <br />
 <br />
@@ -153,19 +237,17 @@
 
 <p>I like working on random projects! 😄</p>
 
-<p><a href="/projects.html">Click here to see my primary projects!</a></p>
+<p><a href="/projects/">Click here to see my primary projects!</a></p>
 
-<p><a href="https://github.com/naturecodevoid?tab=repositories">Click here to see all my projects!</a></p>
+<p><a href="https://github.com/naturecodevoid?tab=repositories">Click here to see all my repositores!</a></p>
 
 <h4 id="languages-i-like">Languages I like:</h4>
-
-<!-- <i class="fab fa-js-square"></i> <i class="fab fa-python"></i> <i class="fab fa-html5"></i> <i class="fab fa-java"></i> -->
 
 <ul>
   <li><a href="https://nodejs.org/">Node.js/javascript</a></li>
   <li><a href="https://www.python.org/">Python</a></li>
-  <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML/CSS</a></li>
   <li><a href="https://www.oracle.com/java/">Java</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML/CSS</a></li>
   <li><a href="https://en.wikipedia.org/wiki/C%2B%2B">C/C++</a></li>
 </ul>
 
@@ -193,14 +275,15 @@
     };
 
     function contact() {
-        two = "Discord: ";
-        one = "n" + "a" + "t" + "u" + "r" + "e";
-        three = "c" + "o" + "d" + "e";
-        five = "v" + "o" + "i" + "d";
-        x = 659000845163251 / 246907793;
-        otherSocials = `Twitter: @${one + three + five}`;
+        const two = "Discord: ";
+        const one = "n" + "a" + "t" + "u" + "r" + "e";
+        const three = "c" + "o" + "d" + "e";
+        const five = "v" + "o" + "i" + "d";
+        const x = 659000845163251 / 246907793;
+        const otherSocials = `<i class="fab fa-twitter"></i> Twitter: @${one + three + five}`;
         function run(
-            a = two +
+            a = '<i class="fab fa-discord"></i> ' +
+                two +
                 one +
                 three +
                 five +
@@ -209,7 +292,7 @@
             b = "\n\n",
         ) {
             try {
-                alertify.alert("naturecodevoid.dev", (a + b + otherSocials).toString().replaceAll("\n", "<br />"));
+                alertify.alert("Contact me", (a + b + otherSocials).toString().replaceAll("\n", "<br />"));
                 /*alertify
                     .confirm(
                         "naturecodevoid.dev",
@@ -234,15 +317,15 @@
     }
 </script>
 
-<p><button onclick="contact()" class="w3-button w3-white">Click to show</button></p>
+<p><button onclick="contact();" class="w3-button w3-white">Click to show</button></p>
 
     </div>
 </div>
 <div id="footer">
     <br />
 <!-- <hr /> -->
-<div class="footer-box">
-    <footer>
+<div class="footer-box" align="bottom">
+    <footer align="bottom">
         <h3>About</h3>
         <p>Made by <a href="https://github.com/naturecodevoid">naturecodevoid</a></p>
         <p>Built using <a href="https://jekyllrb.com/">Jekyll</a></p>

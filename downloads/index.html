@@ -1,6 +1,236 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang='en-US'>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="utf-8" />
+<title>Downloads | naturecodevoid.dev</title>
+
+<link rel="stylesheet" href='/assets/css/normalize.css' />
+<link rel="stylesheet" href='/assets/css/w3.css' />
+<link rel="stylesheet" href='/assets/css/main.css' />
+<link rel="shortcut icon" type="image/x-icon" href='/favicon.ico' />
+
+<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css" />
+
+<script src='/assets/js/fetch.umd.js'></script>
+
+<link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+    integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+    crossorigin="anonymous"
+/>
+
+<script type="text/javascript">
+    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes#Polyfill
+    if (!String.prototype.includes) {
+        String.prototype.includes = function(search, start) {
+            "use strict";
+
+            if (search instanceof RegExp) {
+                throw TypeError("first argument must not be a RegExp");
+            }
+            if (start === undefined) {
+                start = 0;
+            }
+            return this.indexOf(search, start) !== -1;
+        };
+    }
+</script>
+
+<meta property="og:title" content="Downloads | naturecodevoid.dev" />
+<meta property="og:description" content="naturecodevoid's website =)" />
+<meta property="og:url" content="https://naturecodevoid.dev" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    </head>
+    <body>
+        <div id="background"></div>
+<div id="header">
+    <!-- <h4 id="title" href="/">
+    <a href="/">naturecodevoid.dev</a>
+</h4> -->
+<script type="text/javascript">
+    window.addEventListener("scroll", function() {
+        const navbar = document.getElementsByClassName("nav")[0];
+        const add = " w3-white";
+        if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+            if (!navbar.className.includes(add)) navbar.className += add;
+        } else navbar.className = navbar.className.replace(add, "");
+    });
+
+    let canChange = true;
+    const run = () =>
+        setTimeout(() => {
+            canChange = true;
+        }, 75);
+    function toggleNav() {
+        if (canChange) {
+            var element = document.getElementsByClassName("nav-mobile")[0];
+            if (!element.className.includes("w3-show")) {
+                element.className += " w3-show";
+            } else {
+                element.className = element.className.replace(" w3-show", "");
+            }
+            console.debug("Toggled nav");
+            canChange = false;
+            run();
+        } else console.debug("Cant toggle nav");
+    }
+</script>
+
+<div class="nav-div w3-top w3-left w3-card">
+    <div class="nav w3-bar">
+        <a href="/" class="w3-bar-item w3-button w3-left" id="icon-button">
+            <i class="fas fa-tree"></i> NATURECODEVOID.DEV</a
+        >
+
+        <script type="text/javascript">
+            // Script to randomize naturecodevoid.dev icon
+
+            const tryChange = () => {
+                const e = document.getElementById("icon-button");
+
+                if (typeof e === "undefined") return setTimeout(() => tryChange(), 1);
+                if (e === null) return setTimeout(() => tryChange(), 1);
+
+                // https://stackoverflow.com/a/4960020
+                //const randomValue = Math.floor(Math.random() * 100) + 1;
+                const choices = [
+                    `<i class="fas fa-tree"></i>`,
+                    `<i class="fas fa-leaf"></i>`,
+                    `<i class="fas fa-code"></i>`,
+                    `<i class="fas fa-terminal"></i>`,
+                    `<i class="fas fa-mountain"></i>`,
+                    `<i class="fas fa-heart"></i>`,
+                    `<i class="fas fa-gamepad"></i>`,
+                    `<i class="fas fa-bug"></i>`,
+                    `<i class="fas fa-coffee"></i>`,
+                    `<i class="fas fa-microchip"></i>`,
+                    `<i class="fas fa-archive"></i>`,
+                    `<i class="fas fa-file"></i>`,
+                    `<i class="fas fa-file"></i>`,
+                    `<i class="fas fa-cat"></i>`,
+                    `<i class="fas fa-dog"></i>`,
+                    `<i class="fas fa-paw"></i>`,
+                    `<i class="fas fa-folder"></i>`,
+                    `<i class="fas fa-laptop-code"></i>`,
+                    `<i class="fas fa-code-branch"></i>`,
+                    `<i class="fas fa-desktop"></i>`,
+                    `<i class="fas fa-server"></i>`,
+                    `<i class="fas fa-save"></i>`,
+                    `<i class="fas fa-mobile"></i>`,
+                    `<i class="fas fa-power-off"></i>`,
+                    `<i class="fas fa-hard-hat"></i>`,
+                    `<i class="fas fa-tools"></i>`,
+                    `<i class="fas fa-pencil-alt"></i>`,
+                    `<i class="fas fa-truck-pickup"></i>`,
+                    `<i class="fas fa-biking"></i>`,
+                    `<i class="fas fa-battery-half"></i>`,
+                    `<i class="fas fa-battery-full"></i>`,
+                    `<i class="fas fa-headset"></i>`,
+                    `<i class="fas fa-skiing"></i>`,
+                    `<i class="fas fa-snowflake"></i>`,
+                    `<i class="fas fa-snowboarding"></i>`,
+                    `<i class="fas fa-cloud"></i>`,
+                    `<i class="fab fa-js-square"></i>`,
+                    `<i class="fas fa-infinity"></i>`,
+                    `<i class="fas fa-calculator"></i>`,
+                    `<i class="fas fa-wifi"></i>`,
+                    `<i class="fas fa-rocket"></i>`,
+                    `<i class="fab fa-python"></i>`,
+                    `<i class="fab fa-html5"></i>`,
+                    `<i class="fab fa-css3-alt"></i>`,
+                    `<i class="fab fa-java"></i>`,
+                    `<i class="fas fa-file-code"></i>`,
+                    `<i class="fab fa-pagelines"></i>`,
+                    `<i class="fas fa-seedling"></i>`,
+                ];
+                // https://stackoverflow.com/a/5915122
+                const choice = choices[Math.floor(Math.random() * choices.length)];
+                //console.debug(randomValue);
+                console.debug(choice, choices.length);
+                e.innerHTML = e.innerHTML.replace(`<i class="fas fa-tree"></i>`, choice);
+                // if (randomValue === 1) {
+                //     e.innerHTML = e.innerHTML.replace(`<i class="fas fa-tree"></i>`, choice);
+                // }
+            };
+            tryChange();
+        </script>
+
+        <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" onclick="toggleNav();">
+            <i class="fas fa-bars"></i>
+        </a>
+
+        <a href="/" class="w3-bar-item w3-button w3-hide-small w3-right"
+            ><i class="fas fa-home"></i> HOME</a
+        >
+        <div class="w3-dropdown-hover w3-hide-small w3-right">
+            <a href='/projects/' class="w3-bar-item w3-button w3-hide-small w3-right">
+                <i class="fas fa-clipboard-list"></i> PROJECTS <i class="fas fa-angle-down"></i>
+            </a>
+            <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                <!-- Start projects -->
+
+                <a href='/projects/randomtextgenerator/' class="w3-bar-item w3-button"
+                    >RANDOMTEXTGENERATOR</a
+                >
+
+                <!-- End projects -->
+
+                <a href='/projects/#other-projects' class="w3-bar-item w3-button"
+                    >OTHER PROJECTS</a
+                >
+            </div>
+        </div>
+        <a href='/downloads/' class="w3-bar-item w3-button w3-hide-small w3-right"
+            ><i class="fas fa-download"></i> DOWNLOADS</a
+        >
+    </div>
+
+    <!-- Mobile -->
+    <div class="nav-mobile w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+        <a
+            href='/downloads/'
+            class="w3-bar-item w3-button w3-hover-black w3-left"
+            onclick="toggleNav();"
+            ><i class="fas fa-download"></i> DOWNLOADS</a
+        >
+        <a
+            href='/projects/'
+            class="w3-bar-item w3-button w3-hover-black w3-left"
+            onclick="toggleNav();"
+            ><i class="fas fa-clipboard-list"></i> PROJECTS</a
+        >
+
+        <!-- Start projects -->
+
+        <a
+            href='/projects/randomtextgenerator/'
+            class="w3-bar-item w3-button w3-hover-black w3-left"
+        >
+            <span class="mobile-project"><i class="fas fa-angle-right"></i> RANDOMTEXTGENERATOR</span>
+        </a>
+
+        <!-- End projects -->
+
+        <a href="/" class="w3-bar-item w3-button w3-hover-black w3-left" onclick="toggleNav()"
+            ><i class="fas fa-home"></i> HOME</a
+        >
+    </div>
+</div>
+
+<br />
+<br />
+<!-- <hr style="margin-top: 16px;" /> -->
+
+</div>
+<div id="page">
+    <div id="content">
         <script type="text/javascript">
     /*
         : {
@@ -40,7 +270,7 @@
                 normal: {
                     name: "Normal",
                     default_url: "java",
-                    no_back: false,
+                    no_back: true,
                     url: {
                         java: {
                             name: "Java",
@@ -57,7 +287,7 @@
                 azula: {
                     name: "Azula Swords",
                     default_url: "java",
-                    no_back: false,
+                    no_back: true,
                     url: {
                         java: {
                             name: "Java",
@@ -74,7 +304,7 @@
                 dystel: {
                     name: "Dystel Swords",
                     default_url: "java",
-                    no_back: false,
+                    no_back: true,
                     url: {
                         java: {
                             name: "Java",
@@ -91,7 +321,7 @@
                 henry: {
                     name: "Henry's 1.14 default edit Swords",
                     default_url: "java",
-                    no_back: false,
+                    no_back: true,
                     url: {
                         java: {
                             name: "Java",
@@ -108,7 +338,7 @@
                 long: {
                     name: "Long Swords",
                     default_url: "java",
-                    no_back: false,
+                    no_back: true,
                     url: {
                         java: {
                             name: "Java",
@@ -125,7 +355,7 @@
                 medium: {
                     name: "Medium Swords",
                     default_url: "java",
-                    no_back: false,
+                    no_back: true,
                     url: {
                         java: {
                             name: "Java",
@@ -142,7 +372,7 @@
                 short: {
                     name: "Short Swords",
                     default_url: "java",
-                    no_back: false,
+                    no_back: true,
                     url: {
                         java: {
                             name: "Java",
@@ -159,7 +389,7 @@
                 short2: {
                     name: "Short Swords and Short Guards",
                     default_url: "java",
-                    no_back: false,
+                    no_back: true,
                     url: {
                         java: {
                             name: "Java",
@@ -258,7 +488,7 @@
                     versions: {
                         stable: {
                             name: "Stable jar download",
-                            no_back: false,
+                            no_back: true,
                             url: downloadUrl,
                         },
                     },
@@ -327,153 +557,8 @@
     });
 </script>
 
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta charset="utf-8" />
-<title>Downloads | naturecodevoid.dev</title>
 
-<link rel="stylesheet" href="/assets/css/w3.css" /> <link rel="stylesheet" href="/assets/css/main.css" /> <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-
-<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css" />
-
-<script src="/assets/js/fetch.umd.js"></script>
-
-<link
-    rel="stylesheet"
-    href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
-    integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
-    crossorigin="anonymous"
-/>
-
-<script type="text/javascript">
-    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes#Polyfill
-    if (!String.prototype.includes) {
-        String.prototype.includes = function(search, start) {
-            "use strict";
-
-            if (search instanceof RegExp) {
-                throw TypeError("first argument must not be a RegExp");
-            }
-            if (start === undefined) {
-                start = 0;
-            }
-            return this.indexOf(search, start) !== -1;
-        };
-    }
-</script>
-
-<meta property="og:title" content="Downloads | naturecodevoid.dev" />
-<meta property="og:description" content="naturecodevoid's website =)" />
-<meta property="og:url" content="https://naturecodevoid.dev" />
-<meta property="og:locale" content="en_US" />
-<meta property="og:type" content="website" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    </head>
-    <body>
-        <div id="background"></div>
-<div id="header">
-    <!-- <h4 id="title" href="/">
-    <a href="/">naturecodevoid.dev</a>
-</h4> -->
-<script type="text/javascript">
-    window.addEventListener("scroll", function() {
-        const navbar = document.getElementsByClassName("nav")[0];
-        const add = " w3-white";
-        if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
-            if (!navbar.className.includes(add)) navbar.className += add;
-        } else navbar.className = navbar.className.replace(add, "");
-    });
-
-    let canChange = true;
-    const run = () =>
-        setTimeout(() => {
-            canChange = true;
-        }, 75);
-    function toggleNav() {
-        if (canChange) {
-            var element = document.getElementsByClassName("nav-mobile")[0];
-            if (!element.className.includes("w3-show")) {
-                element.className += " w3-show";
-            } else {
-                element.className = element.className.replace(" w3-show", "");
-            }
-            console.debug("Toggled nav");
-            canChange = false;
-            run();
-        } else console.debug("Cant toggle nav");
-    }
-</script>
-
-<div class="nav-div w3-top w3-left w3-card">
-    <div class="nav w3-bar">
-        <a href="/" class="w3-bar-item w3-button w3-left"
-            ><i class="fas fa-tree"></i> NATURECODEVOID.DEV</a
-        >
-        <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" onclick="toggleNav()">
-            <i class="fas fa-bars"></i>
-        </a>
-        <a href="/" class="w3-bar-item w3-button w3-hide-small w3-right"
-            ><i class="fas fa-home"></i> HOME</a
-        >
-        <a href="/projects.html" class="w3-bar-item w3-button w3-hide-small w3-right"
-            ><i class="fas fa-clipboard-list"></i> PROJECTS</a
-        >
-        <a href="/downloads.html" class="w3-bar-item w3-button w3-hide-small w3-right"
-            ><i class="fas fa-download"></i> DOWNLOADS</a
-        >
-    </div>
-
-    <!-- Mobile -->
-    <div class="nav-mobile w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-        <a href="/downloads.html" class="w3-bar-item w3-button w3-left" onclick="toggleNav()"
-            ><i class="fas fa-download"></i> DOWNLOADS</a
-        >
-        <a href="/projects.html" class="w3-bar-item w3-button w3-left" onclick="toggleNav()"
-            ><i class="fas fa-clipboard-list"></i> PROJECTS</a
-        >
-        <a href="/" class="w3-bar-item w3-button w3-left" onclick="toggleNav()"
-            ><i class="fas fa-home"></i> HOME</a
-        >
-    </div>
-</div>
-
-<!--
-<nav>
-    <ul>
-        
-
-        <li>
-            <a href="/projects.html"><strong>Projects</strong></a>
-        </li>
-
-        
-
-        <li>
-            <a href="/downloads.html"><strong>Downloads</strong></a>
-        </li>
-
-        
-
-        <li>
-            <a href="/"><strong>Home</strong></a>
-        </li>
-
-        
-    </ul>
-</nav>
-<br />
--->
-
-<br />
-<br />
-<!-- <hr style="margin-top: 16px;" /> -->
-
-</div>
-<div id="page">
-    <div id="content">
-        <h2>Downloads</h2>
+<h2>Downloads</h2>
 
 <p>Downloads for projects I have worked on</p>
 
@@ -484,8 +569,8 @@
 <div id="footer">
     <br />
 <!-- <hr /> -->
-<div class="footer-box">
-    <footer>
+<div class="footer-box" align="bottom">
+    <footer align="bottom">
         <h3>About</h3>
         <p>Made by <a href="https://github.com/naturecodevoid">naturecodevoid</a></p>
         <p>Built using <a href="https://jekyllrb.com/">Jekyll</a></p>
